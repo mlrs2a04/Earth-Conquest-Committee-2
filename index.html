@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>이차세계대전(World War II) — 개요 · 연표 · 주요 전선</title>
-  <meta name="description" content="이차세계대전(1939–1945)의 개요, 연표, 주요 전선, 자료 모음">
+  <title>이차세계대전(World War II) — 심화 주제 학습 사이트</title>
+  <meta name="description" content="이차세계대전(1939–1945): 발발 배경, 전개, 주요 전투, 인물, 기술/산업, 전후 체제">
   <link rel="icon" href="assets/ww2.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,22 +15,29 @@
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="WWII Home">
         <img src="assets/ww2.svg" alt="" width="36" height="36">
-        <span>WWII</span>
+        <span>WWII · 심화</span>
       </a>
 
       <nav class="nav" aria-label="주 메뉴">
         <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">메뉴</button>
         <ul class="nav-menu" id="navMenu">
           <li><a href="#overview">개요</a></li>
+          <li><a href="#causes">배경/원인</a></li>
+          <li><a href="#powers">주요 세력</a></li>
           <li><a href="#timeline">연표</a></li>
-          <li><a href="#fronts">주요 전선</a></li>
-          <li><a href="#resources">자료</a></li>
+          <li><a href="#battles">주요 전투</a></li>
+          <li><a href="#tech">기술·산업</a></li>
+          <li><a href="#homefront">후방/사회</a></li>
+          <li><a href="#profiles">인물</a></li>
+          <li><a href="#glossary">용어</a></li>
           <li><a href="#quiz">퀴즈</a></li>
+          <li><a href="#refs">참고</a></li>
           <li><a href="#contact">문의</a></li>
         </ul>
       </nav>
 
       <div class="actions">
+        <input type="search" id="globalSearch" class="search" placeholder="전체 검색 (예: 1942, 상륙, 태평양)" aria-label="컨텐츠 검색">
         <button class="btn secondary" id="modeToggle" aria-pressed="false" title="다크모드 전환">🌗</button>
       </div>
     </div>
@@ -39,13 +46,12 @@
   <main id="main">
     <section class="hero section">
       <div class="container hero-inner">
-        <h1 class="headline">
-          이차세계대전 <span class="accent">(1939–1945)</span>
-        </h1>
-        <p class="lead">20세기 인류사의 분수령이 된 전쟁의 흐름을 개요, 연표, 전선별로 살펴봅니다.</p>
+        <h1 class="headline">이차세계대전 <span class="accent">(1939–1945)</span></h1>
+        <p class="lead">발발 배경부터 전후 체제까지, 전쟁의 전모를 연표/전투/기술/사회적 영향으로 입체적으로 학습합니다.</p>
         <div class="hero-cta">
           <a class="btn primary lg" href="#timeline">연표 보기</a>
-          <a class="btn ghost lg" href="#fronts">전선 살펴보기</a>
+          <a class="btn ghost lg" href="#battles">주요 전투</a>
+          <a class="btn ghost lg" href="#tech">기술·산업</a>
         </div>
       </div>
     </section>
@@ -55,93 +61,165 @@
         <h2 id="ovTitle">개요</h2>
         <div class="grid two">
           <p>
-            이차세계대전은 1939년 9월 유럽에서 발발하여 아시아·태평양을 포함한 전 세계로 확산되었고, 
-            1945년 종전으로 마무리되었습니다. 전쟁은 군사·정치·경제·과학기술 전반에 걸친 총력전의 양상을 보였으며,
-            전후 국제 질서와 국제기구 형성에 결정적 영향을 미쳤습니다.
+            이차세계대전은 유럽에서 시작되어 아시아·태평양, 아프리카, 대서양·태평양 해역 등 전 세계로 확산된 총력전이었습니다.
+            공중/해상/지상 전력, 산업 동원, 과학기술 발전, 선전과 정보전이 결합되어 전쟁 양태가 급격히 변화했습니다.
+            전쟁은 수많은 희생과 파괴를 초래했고, 전후 국제 질서(국제기구, 냉전, 비식민화)에 지대한 영향을 남겼습니다.
           </p>
           <ul class="checklist">
-            <li>전개: 유럽 전역 → 북아프리카/지중해 → 태평양/중국 전선</li>
-            <li>특징: 공중전의 확대, 해상/잠수함전, 연합 공급망</li>
-            <li>결과: 전후 분단과 냉전 구도, 국제기구 설립 기반</li>
+            <li>총력전: 군사력 + 산업/과학 + 사회 동원</li>
+            <li>전선 다극화: 유럽 · 북아프리카/지중해 · 아시아/태평양</li>
+            <li>전후 체제: 국제기구 출범, 냉전의 시작, 식민지 체제의 급격한 변화</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="causes" aria-labelledby="causeTitle">
+      <div class="container">
+        <h2 id="causeTitle">배경/원인(요약)</h2>
+        <div class="accordion" id="causeAcc">
+          <button class="acc-item" aria-expanded="false">1) 전간기(1919–1939) 국제질서</button>
+          <div class="acc-panel">
+            <p>전쟁 배상과 경제위기, 국제협력의 한계가 지역 분쟁과 군비 경쟁을 심화시켰습니다.</p>
+          </div>
+          <button class="acc-item" aria-expanded="false">2) 경제·사회 요인</button>
+          <div class="acc-panel">
+            <p>세계공황 이후 국가주의·전체주의의 대두, 자원·시장 확보를 둘러싼 팽창 정책이 등장했습니다.</p>
+          </div>
+          <button class="acc-item" aria-expanded="false">3) 외교 실패와 긴장 고조</button>
+          <div class="acc-panel">
+            <p>유화정책의 한계, 다자안보 체제의 취약성, 지역 침략의 방치가 광역 전쟁으로 비화했습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="powers" aria-labelledby="powTitle">
+      <div class="container">
+        <h2 id="powTitle">주요 세력</h2>
+        <div class="tabs" role="tablist" aria-label="세력 탭">
+          <button role="tab" class="tab active" aria-selected="true" aria-controls="tab-allies" id="tAllies">연합국</button>
+          <button role="tab" class="tab" aria-selected="false" aria-controls="tab-axis" id="tAxis">추축국</button>
+        </div>
+        <div id="tab-allies" role="tabpanel" aria-labelledby="tAllies" class="tab-panel active">
+          <ul class="chips"><li>영국</li><li>미국</li><li>소련</li><li>프랑스(자유 프랑스 포함)</li><li>중국</li><li>기타 연합국</li></ul>
+          <p class="muted">전쟁 진행에 따라 참여국과 역할은 시기별로 크게 변했습니다.</p>
+        </div>
+        <div id="tab-axis" role="tabpanel" aria-labelledby="tAxis" class="tab-panel">
+          <ul class="chips"><li>독일</li><li>이탈리아</li><li>일본</li><li>동맹/협력국</li></ul>
+          <p class="muted">전쟁 후반으로 갈수록 전력과 보급의 격차가 확대되었습니다.</p>
         </div>
       </div>
     </section>
 
     <section class="section alt" id="timeline" aria-labelledby="tlTitle">
       <div class="container">
-        <h2 id="tlTitle">연표 (요약)</h2>
+        <h2 id="tlTitle">연표 (상세 필터)</h2>
         <div class="timeline-controls">
-          <label>연도 필터
-            <input type="range" id="yearRange" min="1939" max="1945" value="1945" step="1" aria-label="연도 선택">
-          </label>
-          <output id="yearOut" for="yearRange">≤ 1945</output>
+          <label>연도 ≤ <output id="yearOut" for="yearRange">1945</output></label>
+          <input type="range" id="yearRange" min="1939" max="1945" value="1945" step="1" aria-label="연도 선택">
+          <select id="theaterFilter" aria-label="전역 필터">
+            <option value="all">전역 전체</option>
+            <option value="europe">유럽</option>
+            <option value="africa">북아프리카·지중해</option>
+            <option value="pacific">아시아·태평양</option>
+            <option value="home">후방/정책</option>
+          </select>
           <button class="btn" id="resetFilter">초기화</button>
         </div>
         <ul class="timeline" id="timelineList" role="list">
-          <!-- Items injected by JS -->
+          <!-- JS 렌더링 -->
         </ul>
       </div>
     </section>
 
-    <section class="section" id="fronts" aria-labelledby="frontTitle">
+    <section class="section" id="battles" aria-labelledby="batTitle">
       <div class="container">
-        <h2 id="frontTitle">주요 전선</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>유럽 전선</h3>
-            <p>서부·동부 유럽에서 벌어진 대규모 지상·공중전. 전략폭격과 상륙작전, 기갑전이 결합되었습니다.</p>
-            <ul class="meta"><li>서부 전선</li><li>동부 전선</li><li>전략폭격</li></ul>
-          </article>
-          <article class="card">
-            <h3>북아프리카·지중해</h3>
-            <p>항구·보급로를 둘러싼 기동전. 사막전 특성과 해·공군 협동이 핵심이었습니다.</p>
-            <ul class="meta"><li>토브룩/엘알라메인</li><li>지중해 제해권</li></ul>
-          </article>
-          <article class="card">
-            <h3>아시아·태평양</h3>
-            <p>광대한 해양과 도서에서의 항모전·상륙전, 중국 대륙의 장기전이 전개되었습니다.</p>
-            <ul class="meta"><li>항공모함 전투</li><li>도서 상륙</li><li>중국 전선</li></ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="resources" aria-labelledby="resTitle">
-      <div class="container">
-        <h2 id="resTitle">자료(학습/시연용)</h2>
+        <h2 id="batTitle">주요 전투(전역별)</h2>
         <div class="grid two">
           <div>
-            <ul>
-              <li>연표 데이터를 JS 배열로 관리 → 필터/검색 시연</li>
-              <li>접근성: 키보드 포커스, 시맨틱 마크업</li>
-              <li>반응형: 모바일 메뉴, 카드 그리드</li>
-            </ul>
+            <p class="muted">전투 리스트에서 키워드로 검색할 수 있습니다 (예: 상륙, 항모, 도시명 등).</p>
+            <input type="search" id="battleSearch" class="search" placeholder="전투 검색 (예: 상륙, 항모, 도시명)">
           </div>
+          <ul class="legend"><li class="tag t-eu">유럽</li><li class="tag t-af">북아프리카·지중해</li><li class="tag t-pa">아시아·태평양</li></ul>
+        </div>
+        <div id="battleList" class="cards three">
+          <!-- JS 렌더링 -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="tech" aria-labelledby="techTitle">
+      <div class="container">
+        <h2 id="techTitle">기술·산업/정보</h2>
+        <div class="cards three">
+          <article class="card">
+            <h3>항공/레이더</h3>
+            <p>전략폭격·제공권 경쟁, 레이더 조기경보 체계가 전장에서 우위 확보에 기여했습니다.</p>
+          </article>
+          <article class="card">
+            <h3>암호/정보</h3>
+            <p>신호정보·암호분석, 기만작전이 전황에 중대한 영향을 미쳤습니다.</p>
+          </article>
+          <article class="card">
+            <h3>산업 동원/물류</h3>
+            <p>대량생산, 선단 호위, 보급망 관리가 전쟁 지속능력을 좌우했습니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="homefront" aria-labelledby="hfTitle">
+      <div class="container">
+        <h2 id="hfTitle">후방/사회적 영향</h2>
+        <div class="grid two">
+          <p>징병·배급제·선전·전시경제 전환이 일상에 큰 변화를 가져왔습니다. 전쟁범죄와 인권 침해 등 비극도 있었습니다.</p>
           <div class="note">
-            <strong>주의:</strong> 본 페이지의 데이터는 수업 시연용 간단 요약이며,
-            심화 학습에는 추가 자료 조사가 필요합니다.
+            <strong>윤리적 학습:</strong> 민간인 피해, 전쟁범죄, 강제동원, 대량 학살 등
+            인권 관점에서의 성찰이 필수적입니다.
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="quiz" aria-labelledby="quizTitle">
+    <section class="section alt" id="profiles" aria-labelledby="proTitle">
+      <div class="container">
+        <h2 id="proTitle">인물(요약 카드)</h2>
+        <div class="cards three" id="profileCards">
+          <!-- JS 렌더링 -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="glossary" aria-labelledby="glTitle">
+      <div class="container">
+        <h2 id="glTitle">용어/개념</h2>
+        <div class="accordion" id="glossAcc"><!-- JS 렌더링 --></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="quiz" aria-labelledby="quizTitle">
       <div class="container">
         <h2 id="quizTitle">퀴즈 (자기점검)</h2>
         <form id="quizForm" class="quiz">
           <fieldset>
-            <legend>연도 매칭</legend>
-            <label>전쟁 발발(유럽): 
+            <legend>기본 개념</legend>
+            <label>유럽에서 전쟁이 시작된 연도:
               <select data-answer="1939">
-                <option value="">선택</option>
-                <option>1939</option><option>1941</option><option>1945</option>
+                <option value="">선택</option><option>1939</option><option>1941</option><option>1945</option>
               </select>
             </label>
-            <label>종전: 
+            <label>전쟁이 끝난 연도:
               <select data-answer="1945">
-                <option value="">선택</option>
-                <option>1939</option><option>1941</option><option>1945</option>
+                <option value="">선택</option><option>1939</option><option>1941</option><option>1945</option>
+              </select>
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>전역 구분</legend>
+            <label>항모전/도서 상륙이 두드러진 전역:
+              <select data-answer="아시아·태평양">
+                <option value="">선택</option><option>유럽</option><option>북아프리카·지중해</option><option>아시아·태평양</option>
               </select>
             </label>
           </fieldset>
@@ -151,7 +229,14 @@
       </div>
     </section>
 
-    <section class="section" id="contact" aria-labelledby="contactTitle">
+    <section class="section" id="refs" aria-labelledby="refTitle">
+      <div class="container">
+        <h2 id="refTitle">참고/학습 가이드</h2>
+        <p class="muted">본 사이트는 수업 시연용 요약이며, 심화 학습 시 사료·학술서·공식 아카이브 등 1차/2차 자료를 추가로 확인하시기 바랍니다.</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="contact" aria-labelledby="contactTitle">
       <div class="container">
         <h2 id="contactTitle">문의(데모)</h2>
         <form id="contactForm" novalidate>
