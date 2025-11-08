@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>이차세계대전(World War II) — 개요 · 연표 · 주요 전선</title>
+  <meta name="description" content="이차세계대전(1939–1945)의 개요, 연표, 주요 전선, 자료 모음">
+  <link rel="icon" href="assets/ww2.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="WWII Home">
+        <img src="assets/ww2.svg" alt="" width="36" height="36">
+        <span>WWII</span>
+      </a>
+
+      <nav class="nav" aria-label="주 메뉴">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">메뉴</button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#overview">개요</a></li>
+          <li><a href="#timeline">연표</a></li>
+          <li><a href="#fronts">주요 전선</a></li>
+          <li><a href="#resources">자료</a></li>
+          <li><a href="#quiz">퀴즈</a></li>
+          <li><a href="#contact">문의</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <button class="btn secondary" id="modeToggle" aria-pressed="false" title="다크모드 전환">🌗</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section">
+      <div class="container hero-inner">
+        <h1 class="headline">
+          이차세계대전 <span class="accent">(1939–1945)</span>
+        </h1>
+        <p class="lead">20세기 인류사의 분수령이 된 전쟁의 흐름을 개요, 연표, 전선별로 살펴봅니다.</p>
+        <div class="hero-cta">
+          <a class="btn primary lg" href="#timeline">연표 보기</a>
+          <a class="btn ghost lg" href="#fronts">전선 살펴보기</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="overview" aria-labelledby="ovTitle">
+      <div class="container">
+        <h2 id="ovTitle">개요</h2>
+        <div class="grid two">
+          <p>
+            이차세계대전은 1939년 9월 유럽에서 발발하여 아시아·태평양을 포함한 전 세계로 확산되었고, 
+            1945년 종전으로 마무리되었습니다. 전쟁은 군사·정치·경제·과학기술 전반에 걸친 총력전의 양상을 보였으며,
+            전후 국제 질서와 국제기구 형성에 결정적 영향을 미쳤습니다.
+          </p>
+          <ul class="checklist">
+            <li>전개: 유럽 전역 → 북아프리카/지중해 → 태평양/중국 전선</li>
+            <li>특징: 공중전의 확대, 해상/잠수함전, 연합 공급망</li>
+            <li>결과: 전후 분단과 냉전 구도, 국제기구 설립 기반</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="timeline" aria-labelledby="tlTitle">
+      <div class="container">
+        <h2 id="tlTitle">연표 (요약)</h2>
+        <div class="timeline-controls">
+          <label>연도 필터
+            <input type="range" id="yearRange" min="1939" max="1945" value="1945" step="1" aria-label="연도 선택">
+          </label>
+          <output id="yearOut" for="yearRange">≤ 1945</output>
+          <button class="btn" id="resetFilter">초기화</button>
+        </div>
+        <ul class="timeline" id="timelineList" role="list">
+          <!-- Items injected by JS -->
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="fronts" aria-labelledby="frontTitle">
+      <div class="container">
+        <h2 id="frontTitle">주요 전선</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>유럽 전선</h3>
+            <p>서부·동부 유럽에서 벌어진 대규모 지상·공중전. 전략폭격과 상륙작전, 기갑전이 결합되었습니다.</p>
+            <ul class="meta"><li>서부 전선</li><li>동부 전선</li><li>전략폭격</li></ul>
+          </article>
+          <article class="card">
+            <h3>북아프리카·지중해</h3>
+            <p>항구·보급로를 둘러싼 기동전. 사막전 특성과 해·공군 협동이 핵심이었습니다.</p>
+            <ul class="meta"><li>토브룩/엘알라메인</li><li>지중해 제해권</li></ul>
+          </article>
+          <article class="card">
+            <h3>아시아·태평양</h3>
+            <p>광대한 해양과 도서에서의 항모전·상륙전, 중국 대륙의 장기전이 전개되었습니다.</p>
+            <ul class="meta"><li>항공모함 전투</li><li>도서 상륙</li><li>중국 전선</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="resources" aria-labelledby="resTitle">
+      <div class="container">
+        <h2 id="resTitle">자료(학습/시연용)</h2>
+        <div class="grid two">
+          <div>
+            <ul>
+              <li>연표 데이터를 JS 배열로 관리 → 필터/검색 시연</li>
+              <li>접근성: 키보드 포커스, 시맨틱 마크업</li>
+              <li>반응형: 모바일 메뉴, 카드 그리드</li>
+            </ul>
+          </div>
+          <div class="note">
+            <strong>주의:</strong> 본 페이지의 데이터는 수업 시연용 간단 요약이며,
+            심화 학습에는 추가 자료 조사가 필요합니다.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="quiz" aria-labelledby="quizTitle">
+      <div class="container">
+        <h2 id="quizTitle">퀴즈 (자기점검)</h2>
+        <form id="quizForm" class="quiz">
+          <fieldset>
+            <legend>연도 매칭</legend>
+            <label>전쟁 발발(유럽): 
+              <select data-answer="1939">
+                <option value="">선택</option>
+                <option>1939</option><option>1941</option><option>1945</option>
+              </select>
+            </label>
+            <label>종전: 
+              <select data-answer="1945">
+                <option value="">선택</option>
+                <option>1939</option><option>1941</option><option>1945</option>
+              </select>
+            </label>
+          </fieldset>
+          <button class="btn primary" type="submit">채점</button>
+          <p id="quizResult" class="form-result" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contactTitle">
+      <div class="container">
+        <h2 id="contactTitle">문의(데모)</h2>
+        <form id="contactForm" novalidate>
+          <div class="form-grid">
+            <label>성함 <input type="text" name="name" required></label>
+            <label>이메일 <input type="email" name="email" required></label>
+            <label class="full">내용 <textarea name="message" rows="4" required></textarea></label>
+          </div>
+          <button type="submit" class="btn primary">보내기</button>
+          <p id="contactResult" class="form-result" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> WWII Classroom Demo</small>
+      <a href="#top" class="to-top" aria-label="맨 위로">↑ 맨 위</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
